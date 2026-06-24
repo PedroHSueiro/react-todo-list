@@ -25,7 +25,7 @@ export function Dialog({ children, isOpen, onClose }) {
             <IconClose></IconClose>
           </button>
         </div>
-        {children}
+        <div className="body">{children}</div>
       </dialog>
     </React.Fragment>
   );
