@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./dialog.style.css";
+import { IconClose } from "../icons";
 
 export function Dialog({ children, isOpen, onClose }) {
   const dialogRef = useRef(null);
@@ -18,9 +19,13 @@ export function Dialog({ children, isOpen, onClose }) {
 
   return (
     <React.Fragment>
-      <dialog ref={dialogRef}>
-        <p>This is a dialog</p>
-        <button onClick={onClose}>Close</button>
+      <dialog className="dialog" ref={dialogRef}>
+        <div className="btn-close-wrapper">
+          <button onClick={onClose} className="btn-close">
+            <IconClose></IconClose>
+          </button>
+        </div>
+        {children}
       </dialog>
     </React.Fragment>
   );
