@@ -1,0 +1,17 @@
+.text-input {
+  background-color: transparent;
+  border: 1px solid #eaeaea;
+  border-radius: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #eaeaea;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  padding: 12px 43px;
+  width: 360px;
+  max-width: 100%;
+}
+
+.text-input::placeholder {
+  color: #eaeaea;
+}
