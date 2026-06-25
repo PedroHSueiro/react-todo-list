@@ -13,6 +13,7 @@ import { ToDoList } from "./components/ToDoList";
 import { ToDoForm } from "./components/ToDoForm";
 import TodoContext from "./components/TodoProvider/TodoContext";
 import { ToDoGroup } from "./components/ToDoGroup";
+import { EmptyState } from "./components/EmptyState";
 
 function App() {
   const {
@@ -47,6 +48,7 @@ function App() {
             heading="Para estudar"
             items={todos.filter((t) => !t.completed)}
           ></ToDoGroup>
+          {todos.length == 0 && <EmptyState></EmptyState>}
           <ToDoGroup
             heading="Concluído"
             items={todos.filter((t) => t.completed)}

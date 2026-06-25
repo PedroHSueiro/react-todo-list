@@ -6,11 +6,13 @@ export function ToDoGroup({ heading, items }) {
   return (
     <>
       <SubHeading>{heading}</SubHeading>
-      <ToDoList>
-        {items.map(function (t) {
-          return <ToDoItem key={t.id} item={t} />;
-        })}
-      </ToDoList>
+      {items.length > 0 && (
+        <ToDoList>
+          {items.map(function (t) {
+            return <ToDoItem key={t.id} item={t} />;
+          })}
+        </ToDoList>
+      )}
     </>
   );
 }
