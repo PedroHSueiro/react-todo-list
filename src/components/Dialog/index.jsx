@@ -2,12 +2,22 @@ import React, { useEffect, useRef } from "react";
 import "./dialog.style.css";
 import { IconClose } from "../icons";
 
+const CLOSE = "close";
+
 export function Dialog({ children, isOpen, onClose }) {
   const dialogRef = useRef(null);
 
   useEffect(() => {
     isOpen ? openDialog() : closeDialog();
   }, [isOpen]);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    dialog?.addEventListener(CLOSE, onClose);
+    return () => {
+      dialog?.addEventListener(CLOSE, onClose);
+    };
+  }, [onClose]);
 
   const openDialog = () => {
     dialogRef.current.showModal();

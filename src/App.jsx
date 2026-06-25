@@ -15,16 +15,18 @@ import TodoContext from "./components/TodoProvider/TodoContext";
 import { ToDoGroup } from "./components/ToDoGroup";
 
 function App() {
-  const [showDialog, setShowDialog] = useState(false);
-  const { todos, addTodo } = use(TodoContext);
-
-  const toggleDialog = () => {
-    setShowDialog(!showDialog);
-  };
+  const {
+    todos,
+    addTodo,
+    showDialog,
+    openFormDialog,
+    closeFormDialog,
+    selectedTodo,
+  } = use(TodoContext);
 
   const handleFormSubmit = (formData) => {
     addTodo(formData);
-    toggleDialog();
+    closeFormDialog();
   };
 
   return (
@@ -45,10 +47,13 @@ function App() {
             items={todos.filter((t) => t.completed)}
           ></ToDoGroup>
           <Footer>
-            <Dialog isOpen={showDialog} onClose={toggleDialog}>
-              <ToDoForm onSubmit={handleFormSubmit}></ToDoForm>
+            <Dialog isOpen={showDialog} onClose={closeFormDialog}>
+              <ToDoForm
+                onSubmit={handleFormSubmit}
+                defaultValue={selectedTodo?.description}
+              ></ToDoForm>
             </Dialog>
-            <FabButton onClick={toggleDialog}>
+            <FabButton onClick={openFormDialog}>
               <IconPlus />
             </FabButton>
           </Footer>
