@@ -58,11 +58,26 @@ export function TodoProvider({ children }) {
     });
   };
 
+  const editTodo = (formData) => {
+    setTodos((prevState) => {
+      return prevState.map((t) => {
+        if (t.id == selectedTodo.id) {
+          return {
+            ...t,
+            description: formData.get("itemDescription"),
+          };
+        }
+        return t;
+      });
+    });
+  };
+
   return (
     <TodoContext
       value={{
         todos,
         addTodo,
+        editTodo,
         toggleTodoCompleted,
         deleteTodo,
         showDialog,
