@@ -1,7 +1,10 @@
 import "./todo-item.style.css";
 import { IconPencil, IconTrash } from "../icons";
+import { use } from "react";
+import TodoContext from "../TodoProvider/TodoContext";
 
-export function ToDoItem({ item, onToggleCompleted }) {
+export function ToDoItem({ item }) {
+  const { toggleTodoCompleted } = use(TodoContext);
   const styles = ["todo-item"];
 
   if (item.completed) {
@@ -18,7 +21,7 @@ export function ToDoItem({ item, onToggleCompleted }) {
           type="checkbox"
           className="checkbox"
           defaultChecked={item.completed}
-          onClick={() => onToggleCompleted(item)}
+          onClick={() => toggleTodoCompleted(item)}
         />
         <p className="description">{item.description}</p>
         <div className="actions">
