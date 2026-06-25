@@ -4,7 +4,7 @@ import { use } from "react";
 import TodoContext from "../TodoProvider/TodoContext";
 
 export function ToDoItem({ item }) {
-  const { toggleTodoCompleted } = use(TodoContext);
+  const { toggleTodoCompleted, deleteTodo } = use(TodoContext);
   const styles = ["todo-item"];
 
   if (item.completed) {
@@ -25,7 +25,7 @@ export function ToDoItem({ item }) {
         />
         <p className="description">{item.description}</p>
         <div className="actions">
-          <button className="btn">
+          <button className="btn" onClick={() => deleteTodo(item)}>
             <IconTrash />
           </button>
           <button className="btn">

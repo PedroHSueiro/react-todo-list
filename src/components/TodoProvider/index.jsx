@@ -43,12 +43,19 @@ export function TodoProvider({ children }) {
     });
   };
 
+  const deleteTodo = (todo) => {
+    setTodos((prevState) => {
+      return prevState.filter((t) => t.id != todo.id);
+    });
+  };
+
   return (
     <TodoContext
       value={{
         todos,
         addTodo,
         toggleTodoCompleted,
+        deleteTodo,
       }}
     >
       {children}
