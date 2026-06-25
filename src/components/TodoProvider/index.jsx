@@ -44,11 +44,14 @@ export function TodoProvider({ children }) {
   };
 
   return (
-  <TodoContext 
-  value={
-    todos,
-    addTodo,
-    toggleTodoCompleted
-  }>{children}</TodoContext>
-);
+    <TodoContext
+      value={{
+        todos,
+        addTodo,
+        toggleTodoCompleted,
+      }}
+    >
+      {children}
+    </TodoContext>
+  );
 }
