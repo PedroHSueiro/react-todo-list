@@ -18,7 +18,7 @@ export const createTodo = async (todo) => {
 
 export const updateTodo = async (todo) => {
   const response = await fetch(`${baseURL}/${todo.id}`, {
-    method: "POST",
+    method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
