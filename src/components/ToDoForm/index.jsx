@@ -1,15 +1,19 @@
+import { use } from "react";
 import { Button } from "../Button";
 import { TextInput } from "../TextInput";
 import "./todo-form.style.css";
+import TodoContext from "../TodoProvider/TodoContext";
 
-export function ToDoForm({ onSubmit, defaultValue }) {
+export function ToDoForm({ onSubmit }) {
+  const { selectedTodo } = use(TodoContext);
+
   return (
-    <form action={onSubmit} className="todo-form">
+    <form role="form" action={onSubmit} className="todo-form">
       <TextInput
         placeholder="Digite o item que deseja adicionar"
         name="itemDescription"
         id="itemDescription"
-        defaultValue={defaultValue}
+        defaultValue={selectedTodo?.description}
         required
       ></TextInput>
       <Button>Salvar item</Button>

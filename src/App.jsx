@@ -19,7 +19,6 @@ function App() {
     showDialog,
     openFormDialog,
     closeFormDialog,
-    selectedTodo,
   } = use(TodoContext);
 
   return (
@@ -53,7 +52,6 @@ function App() {
       <Dialog isOpen={showDialog} onClose={closeFormDialog}>
         <ToDoForm
           onSubmit={upsertTodo}
-          defaultValue={selectedTodo?.description}
         ></ToDoForm>
       </Dialog>
     </main>
