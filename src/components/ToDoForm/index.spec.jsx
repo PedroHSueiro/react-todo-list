@@ -1,28 +1,21 @@
-import { render } from "@testing-library/react";
-import TodoContext from "../TodoProvider/TodoContext";
 import { ToDoForm } from ".";
 import userEvent from "@testing-library/user-event";
+import customRenderer from "../../helpers/CustomRenderer";
 
 describe("ToDoForm", () => {
   test("Deve renderizar o form corretamente", () => {
-    const { getByRole } = render(
-      <TodoContext.Provider
-        value={{ selectedTodo: { description: "Descrição" } }}
-      >
-        <ToDoForm onSubmit={() => {}}></ToDoForm>
-      </TodoContext.Provider>,
+    const { getByRole } = customRenderer(
+      <ToDoForm onSubmit={() => {}}></ToDoForm>,
+      { selectedTodo: { description: "Descrição" } },
     );
 
     expect(getByRole("form")).toBeInTheDocument();
   });
 
   test("Deve renderizar a descrição do toDo selecionado", () => {
-    const { getByRole } = render(
-      <TodoContext.Provider
-        value={{ selectedTodo: { description: "Descrição" } }}
-      >
-        <ToDoForm onSubmit={() => {}}></ToDoForm>
-      </TodoContext.Provider>,
+    const { getByRole } = customRenderer(
+      <ToDoForm onSubmit={() => {}}></ToDoForm>,
+      { selectedTodo: { description: "Descrição" } },
     );
 
     expect(getByRole("textbox")).toBeInTheDocument();
@@ -32,12 +25,9 @@ describe("ToDoForm", () => {
   test("Deve enviar o form com a descrição atualizada", async () => {
     const mockedSubmitFuncion = jest.fn();
 
-    const { getByRole } = render(
-      <TodoContext.Provider
-        value={{ selectedTodo: { description: "Descrição" } }}
-      >
-        <ToDoForm onSubmit={mockedSubmitFuncion}></ToDoForm>
-      </TodoContext.Provider>,
+    const { getByRole } = customRenderer(
+      <ToDoForm onSubmit={mockedSubmitFuncion}></ToDoForm>,
+      { selectedTodo: { description: "Descrição" } },
     );
 
     const input = getByRole("textbox");

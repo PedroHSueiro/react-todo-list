@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
-import TodoContext from "../TodoProvider/TodoContext";
 import { ToDoGroup } from ".";
+import customRenderer from "../../helpers/CustomRenderer";
 
 describe("ToDoGroup", () => {
   test("Deve renderizar o grupo corretamente", () => {
@@ -28,10 +28,8 @@ describe("ToDoGroup", () => {
       },
     ];
 
-    const { getByText, queryAllByRole } = render(
-      <TodoContext.Provider value={{}}>
-        <ToDoGroup items={items} heading={"Teste 2"}></ToDoGroup>
-      </TodoContext.Provider>,
+    const { getByText, queryAllByRole } = customRenderer(
+      <ToDoGroup items={items} heading={"Teste 2"}></ToDoGroup>,
     );
 
     expect(queryAllByRole("listitem")).toHaveLength(2);

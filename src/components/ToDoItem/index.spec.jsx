@@ -1,7 +1,6 @@
-import { render } from "@testing-library/react";
 import { ToDoItem } from ".";
-import TodoContext from "../TodoProvider/TodoContext";
 import userEvent from "@testing-library/user-event";
+import customRenderer from "../../helpers/CustomRenderer";
 
 describe("ToDoItem", () => {
   test("Deve renderizar o item corretamente", () => {
@@ -11,10 +10,8 @@ describe("ToDoItem", () => {
       createdAt: "2026-09-14T10:00:00.000Z",
     };
 
-    const { getByText, getByRole } = render(
-      <TodoContext.Provider value={{}}>
-        <ToDoItem item={item}></ToDoItem>
-      </TodoContext.Provider>,
+    const { getByText, getByRole } = customRenderer(
+      <ToDoItem item={item}></ToDoItem>,
     );
 
     expect(getByText("Descrição")).toBeInTheDocument();
@@ -31,11 +28,9 @@ describe("ToDoItem", () => {
 
     const mockedOpenFormDialog = jest.fn();
 
-    const { getByRole } = render(
-      <TodoContext.Provider value={{ openFormDialog: mockedOpenFormDialog }}>
-        <ToDoItem item={item}></ToDoItem>
-      </TodoContext.Provider>,
-    );
+    const { getByRole } = customRenderer(<ToDoItem item={item}></ToDoItem>, {
+      openFormDialog: mockedOpenFormDialog,
+    });
 
     const editBtn = getByRole("button", { name: /edit/i });
     await userEvent.click(editBtn);
@@ -51,11 +46,9 @@ describe("ToDoItem", () => {
 
     const mockedRemoveTodo = jest.fn();
 
-    const { getByRole } = render(
-      <TodoContext.Provider value={{ removeTodo: mockedRemoveTodo }}>
-        <ToDoItem item={item}></ToDoItem>
-      </TodoContext.Provider>,
-    );
+    const { getByRole } = customRenderer(<ToDoItem item={item}></ToDoItem>, {
+      removeTodo: mockedRemoveTodo,
+    });
 
     const editBtn = getByRole("button", { name: /delete/i });
     await userEvent.click(editBtn);
