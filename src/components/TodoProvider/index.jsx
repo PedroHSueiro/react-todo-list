@@ -18,7 +18,10 @@ export function TodoProvider({ children }) {
       setTodos(todosFromApi);
     };
 
-    fetchTodos();
+    // Apenas para testes
+    setTimeout(() => {
+      fetchTodos();
+    }, 1000);
   }, []);
 
   const upsertTodo = async (formData) => {
