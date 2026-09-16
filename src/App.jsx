@@ -19,6 +19,7 @@ function App() {
     showDialog,
     openFormDialog,
     closeFormDialog,
+    isLoading,
   } = use(TodoContext);
 
   return (
@@ -34,11 +35,13 @@ function App() {
           <ToDoGroup
             heading="Para estudar"
             items={todos.filter((t) => !t.completed)}
+            isLoading={isLoading}
           ></ToDoGroup>
-          {todos.length == 0 && <EmptyState></EmptyState>}
+          {todos.length == 0 && !isLoading && <EmptyState></EmptyState>}
           <ToDoGroup
             heading="Concluído"
             items={todos.filter((t) => t.completed)}
+            isLoading={isLoading}
           ></ToDoGroup>
 
           <Footer>
@@ -50,9 +53,7 @@ function App() {
       </Container>
 
       <Dialog isOpen={showDialog} onClose={closeFormDialog}>
-        <ToDoForm
-          onSubmit={upsertTodo}
-        ></ToDoForm>
+        <ToDoForm onSubmit={upsertTodo}></ToDoForm>
       </Dialog>
     </main>
   );

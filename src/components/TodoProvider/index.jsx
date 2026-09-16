@@ -9,6 +9,7 @@ import TodoContext from "./TodoContext";
 
 export function TodoProvider({ children }) {
   const [todos, setTodos] = useState([]);
+  const [isLoading, setIsLoading] = useState(false); // Exclusivamente para simular carregamento dos dados async
   const [showDialog, setShowDialog] = useState(false);
   const [selectedTodo, setSelectedTodo] = useState();
 
@@ -18,9 +19,12 @@ export function TodoProvider({ children }) {
       setTodos(todosFromApi);
     };
 
-    // Apenas para testes
+    // Apenas para testes async
+    setIsLoading(true);
+
     setTimeout(() => {
       fetchTodos();
+      setIsLoading(false);
     }, 1000);
   }, []);
 
@@ -92,6 +96,7 @@ export function TodoProvider({ children }) {
         selectedTodo,
         openFormDialog,
         closeFormDialog,
+        isLoading,
       }}
     >
       {children}
