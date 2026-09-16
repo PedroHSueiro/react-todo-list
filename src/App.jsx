@@ -11,6 +11,7 @@ import { ToDoForm } from "./components/ToDoForm";
 import TodoContext from "./components/TodoProvider/TodoContext";
 import { ToDoGroup } from "./components/ToDoGroup";
 import { EmptyState } from "./components/EmptyState";
+import { ToDoCount } from "./components/ToDoCount";
 
 function App() {
   const {
@@ -28,6 +29,7 @@ function App() {
         <Header>
           <Heading>
             <IconSchool /> Plano de estudos
+            <ToDoCount />
           </Heading>
         </Header>
 
