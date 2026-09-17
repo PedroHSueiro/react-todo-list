@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1789607049769" clover="3.2.0">
-  <project timestamp="1789607049769" name="All files">
-    <metrics statements="116" coveredstatements="60" conditionals="21" coveredconditionals="7" methods="59" coveredmethods="25" elements="196" coveredelements="92" complexity="0" loc="116" ncloc="116" packages="21" files="24" classes="24"/>
+<coverage generated="1789660067502" clover="3.2.0">
+  <project timestamp="1789660067502" name="All files">
+    <metrics statements="120" coveredstatements="65" conditionals="22" coveredconditionals="7" methods="60" coveredmethods="27" elements="202" coveredelements="99" complexity="0" loc="120" ncloc="120" packages="21" files="24" classes="24"/>
     <package name="src">
       <metrics statements="6" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="App.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\App.jsx">
@@ -66,10 +66,10 @@
       </file>
     </package>
     <package name="src.components.FabButton">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\FabButton\index.jsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Footer">
@@ -108,16 +108,19 @@
       </file>
     </package>
     <package name="src.components.ToDoCount">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\ToDoCount\index.jsx">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ToDoForm">
@@ -218,14 +221,15 @@
       </file>
     </package>
     <package name="src.components.icons">
-      <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+      <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\icons\index.jsx">
-        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
         <line num="2" count="0" type="stmt"/>
         <line num="18" count="5" type="stmt"/>
         <line num="34" count="5" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
         <line num="66" count="0" type="stmt"/>
+        <line num="83" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.helpers">

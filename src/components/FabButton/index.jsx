@@ -1,8 +1,8 @@
 import "./fab-button.style.css";
 
-export function FabButton({ children, ...rest }) {
+export function FabButton({ children, aditiveClass = "", ...rest }) {
   return (
-    <button className="fab" {...rest}>
+    <button className={`fab ${aditiveClass}`} {...rest}>
       {children}
     </button>
   );
