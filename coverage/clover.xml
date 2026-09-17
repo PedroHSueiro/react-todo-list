@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1789683091745" clover="3.2.0">
-  <project timestamp="1789683091745" name="All files">
-    <metrics statements="120" coveredstatements="69" conditionals="22" coveredconditionals="8" methods="60" coveredmethods="31" elements="202" coveredelements="108" complexity="0" loc="120" ncloc="120" packages="21" files="24" classes="24"/>
+<coverage generated="1789683918731" clover="3.2.0">
+  <project timestamp="1789683918732" name="All files">
+    <metrics statements="120" coveredstatements="71" conditionals="22" coveredconditionals="8" methods="60" coveredmethods="33" elements="202" coveredelements="112" complexity="0" loc="120" ncloc="120" packages="21" files="24" classes="24"/>
     <package name="src">
       <metrics statements="6" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="App.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\App.jsx">
@@ -73,10 +73,10 @@
       </file>
     </package>
     <package name="src.components.Footer">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\Footer\index.jsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Header">
@@ -87,10 +87,10 @@
       </file>
     </package>
     <package name="src.components.Heading">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\Heading\index.jsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.SubHeading">
