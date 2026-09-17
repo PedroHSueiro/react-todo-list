@@ -10,4 +10,8 @@ describe("./mergeClass.js", () => {
       expect(mergeClass(input)).toBe(output);
     },
   );
+
+  test("Deve retornar a classe todo-item quando não for passado nenhum input", () => {
+    expect(mergeClass()).toBe("todo-item");
+  });
 });

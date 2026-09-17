@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1789682649241" clover="3.2.0">
-  <project timestamp="1789682649241" name="All files">
-    <metrics statements="120" coveredstatements="68" conditionals="22" coveredconditionals="7" methods="60" coveredmethods="30" elements="202" coveredelements="105" complexity="0" loc="120" ncloc="120" packages="21" files="24" classes="24"/>
+<coverage generated="1789683091745" clover="3.2.0">
+  <project timestamp="1789683091745" name="All files">
+    <metrics statements="120" coveredstatements="69" conditionals="22" coveredconditionals="8" methods="60" coveredmethods="31" elements="202" coveredelements="108" complexity="0" loc="120" ncloc="120" packages="21" files="24" classes="24"/>
     <package name="src">
       <metrics statements="6" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="App.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\App.jsx">
@@ -146,22 +146,22 @@
       </file>
     </package>
     <package name="src.components.ToDoItem">
-      <metrics statements="10" coveredstatements="9" conditionals="3" coveredconditionals="2" methods="5" coveredmethods="4"/>
+      <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="3" methods="5" coveredmethods="5"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\ToDoItem\index.jsx">
-        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-        <line num="8" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
       </file>
       <file name="mergeClass.js" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\ToDoItem\mergeClass.js">
-        <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="2" count="7" type="stmt"/>
-        <line num="4" count="7" type="cond" truecount="2" falsecount="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="2" count="9" type="stmt"/>
+        <line num="4" count="9" type="cond" truecount="2" falsecount="0"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ToDoList">
@@ -225,8 +225,8 @@
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\icons\index.jsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="38" count="6" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="38" count="7" type="stmt"/>
         <line num="56" count="1" type="stmt"/>
         <line num="74" count="1" type="stmt"/>
         <line num="93" count="18" type="stmt"/>
@@ -236,7 +236,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="customRenderer.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\helpers\customRenderer.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="5" count="9" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.services">

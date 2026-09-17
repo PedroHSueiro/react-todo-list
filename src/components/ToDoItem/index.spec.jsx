@@ -54,4 +54,22 @@ describe("ToDoItem", () => {
     await userEvent.click(editBtn);
     expect(mockedRemoveTodo).toHaveBeenCalledWith(item);
   });
+
+  test("Deve chamar a função toggleTodoCompleted quando a checkbox for selecionada", async () => {
+    const item = {
+      description: "Completar ToDo",
+      completed: false,
+      createdAt: "2026-09-14T10:00:00.000Z",
+    };
+
+    const mockedtoggleTodoCompleted = jest.fn();
+
+    const { getByRole } = customRenderer(<ToDoItem item={item}></ToDoItem>, {
+      toggleTodoCompleted: mockedtoggleTodoCompleted,
+    });
+
+    const checkbox = getByRole("checkbox");
+    await userEvent.click(checkbox);
+    expect(mockedtoggleTodoCompleted).toHaveBeenCalledWith(item);
+  });
 });
