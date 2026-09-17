@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1789660067502" clover="3.2.0">
-  <project timestamp="1789660067502" name="All files">
-    <metrics statements="120" coveredstatements="65" conditionals="22" coveredconditionals="7" methods="60" coveredmethods="27" elements="202" coveredelements="99" complexity="0" loc="120" ncloc="120" packages="21" files="24" classes="24"/>
+<coverage generated="1789682649241" clover="3.2.0">
+  <project timestamp="1789682649241" name="All files">
+    <metrics statements="120" coveredstatements="68" conditionals="22" coveredconditionals="7" methods="60" coveredmethods="30" elements="202" coveredelements="105" complexity="0" loc="120" ncloc="120" packages="21" files="24" classes="24"/>
     <package name="src">
       <metrics statements="6" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="App.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\App.jsx">
@@ -69,7 +69,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\FabButton\index.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="6" type="stmt"/>
+        <line num="4" count="17" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Footer">
@@ -111,16 +111,16 @@
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\ToDoCount\index.jsx">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
+        <line num="8" count="17" type="stmt"/>
+        <line num="9" count="17" type="stmt"/>
+        <line num="11" count="17" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="18" count="17" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="22" count="17" type="stmt"/>
       </file>
     </package>
     <package name="src.components.ToDoForm">
@@ -221,15 +221,15 @@
       </file>
     </package>
     <package name="src.components.icons">
-      <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
       <file name="index.jsx" path="C:\Users\pedsu\Documents\Projects\Alura\curso-react\react-todo-list\src\components\icons\index.jsx">
-        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
-        <line num="34" count="5" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="83" count="6" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="93" count="18" type="stmt"/>
       </file>
     </package>
     <package name="src.helpers">
