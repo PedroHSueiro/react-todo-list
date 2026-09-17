@@ -1,13 +1,13 @@
 import { render } from "@testing-library/react";
-import { Container } from ".";
+import { ChecklistsWrapper } from ".";
 
-describe("Container", () => {
+describe("ChecklistsWrapper", () => {
   test("Deve renderizar o componenete corretamente", () => {
     const { getByText, container } = render(
-      <Container>Qualquer children</Container>,
+      <ChecklistsWrapper>Qualquer children</ChecklistsWrapper>,
     );
 
     expect(getByText("Qualquer children")).toBeInTheDocument();
-    expect(container.querySelector(".container")).toBeInTheDocument();
+    expect(container.querySelector(".wrapper")).toBeInTheDocument();
   });
 });
