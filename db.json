@@ -1,0 +1,11 @@
+{
+  "todos": [
+    {
+      "description": "Testes em React 2",
+      "completed": false,
+      "createdAt": "2026-08-25T17:57:08.425Z",
+      "id": "-bGSIdKJfbc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

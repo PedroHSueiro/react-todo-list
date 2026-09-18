@@ -1,41 +1,62 @@
 import { useEffect, useState } from "react";
+import {
+  createTodo,
+  deleteTodo,
+  getTodos,
+  updateTodo,
+} from "../../services/TodoService";
 import TodoContext from "./TodoContext";
 
-const TODOS = "todos";
-
 export function TodoProvider({ children }) {
-  const savedTodos = localStorage.getItem(TODOS);
-
-  const [todos, setTodos] = useState(savedTodos ? JSON.parse(savedTodos) : []);
+  const [todos, setTodos] = useState([]);
+  const [isLoading, setIsLoading] = useState(false); // Exclusivamente para simular carregamento dos dados async
   const [showDialog, setShowDialog] = useState(false);
   const [selectedTodo, setSelectedTodo] = useState();
 
   useEffect(() => {
-    localStorage.setItem(TODOS, JSON.stringify(todos));
-  }, [todos]);
+    const fetchTodos = async () => {
+      const todosFromApi = await getTodos();
+      setTodos(todosFromApi);
+    };
 
-  const openFormDialog = (todo) => {
-    if (todo) {
-      setSelectedTodo(todo);
-    }
-    setShowDialog(true);
-  };
+    // Apenas para testes async
+    setIsLoading(true);
 
-  const closeFormDialog = () => {
-    setShowDialog(false);
-    setSelectedTodo(null);
-  };
+    setTimeout(() => {
+      fetchTodos();
+      setIsLoading(false);
+    }, 1000);
+  }, []);
 
-  const addTodo = (formData) => {
-    setTodos((prevState) => {
-      const todo = {
-        id: prevState.length + 1,
+  const upsertTodo = async (formData) => {
+    if (selectedTodo) {
+      const updatedTodo = {
+        ...selectedTodo,
+        description: formData.get("itemDescription"),
+      };
+
+      setTodos((oldState) =>
+        oldState.map((t) => (t.id === selectedTodo.id ? updatedTodo : t)),
+      );
+
+      await updateTodo(updatedTodo);
+    } else {
+      const newTodo = {
         description: formData.get("itemDescription"),
         completed: false,
         createdAt: new Date().toISOString(),
       };
-      return [...prevState, todo];
-    });
+
+      const createdTodo = await createTodo(newTodo);
+      setTodos((oldState) => [...oldState, createdTodo]);
+    }
+
+    closeFormDialog();
+  };
+
+  const removeTodo = async (todo) => {
+    setTodos((prevState) => prevState.filter((t) => t.id !== todo.id));
+    await deleteTodo(todo.id);
   };
 
   const toggleTodoCompleted = (todo) => {
@@ -52,38 +73,30 @@ export function TodoProvider({ children }) {
     });
   };
 
-  const deleteTodo = (todo) => {
-    setTodos((prevState) => {
-      return prevState.filter((t) => t.id != todo.id);
-    });
+  const openFormDialog = (todo) => {
+    if (todo) {
+      setSelectedTodo(todo);
+    }
+    setShowDialog(true);
   };
 
-  const editTodo = (formData) => {
-    setTodos((prevState) => {
-      return prevState.map((t) => {
-        if (t.id == selectedTodo.id) {
-          return {
-            ...t,
-            description: formData.get("itemDescription"),
-          };
-        }
-        return t;
-      });
-    });
+  const closeFormDialog = () => {
+    setShowDialog(false);
+    setSelectedTodo(null);
   };
 
   return (
     <TodoContext
       value={{
         todos,
-        addTodo,
-        editTodo,
+        upsertTodo,
         toggleTodoCompleted,
-        deleteTodo,
+        removeTodo,
         showDialog,
         selectedTodo,
         openFormDialog,
         closeFormDialog,
+        isLoading,
       }}
     >
       {children}
