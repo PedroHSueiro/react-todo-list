@@ -16,7 +16,7 @@ export function ToDoForm({ onSubmit }) {
         defaultValue={selectedTodo?.description}
         required
       ></TextInput>
-      <Button>Salvar item</Button>
+      <Button type="submit">Salvar item</Button>
     </form>
   );
 }

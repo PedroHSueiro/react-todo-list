@@ -47,7 +47,7 @@ function App() {
           ></ToDoGroup>
 
           <Footer>
-            <FabButton onClick={() => openFormDialog()}>
+            <FabButton onClick={() => openFormDialog()} aria-label="adicionar">
               <IconPlus />
             </FabButton>
           </Footer>
